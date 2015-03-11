@@ -1,0 +1,148 @@
+#!/bin/bash
+
+NORMAL="color:#000000;"
+STOPB="rgba(50,50,50,200)"
+STOPF="rgba(180,180,180,200)"
+STOPL="rgba(0,0,0,255)"
+HS="9pt"
+HF=""
+THEMEDIR="$HOME/.kde4/share/apps/be.shell/Themes/Void"
+
+if [ $1 = "mpc" ]; then
+
+  SEP=" "
+  SEP1="|"
+  MPC=`mpc -f "[%artist%]"|head -n 1`
+  MPC1=`mpc -f "[%title% ]"|head -n 1`
+  MPC2=`mpc -f "[%album%]"|head -n 1`
+  MPC3=`mpc -f "[%track%]"|head -n 1`
+  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
+    
+    if [ $STS = "playing" ]; then
+    
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$MPC1</td><td>$SEP</td><td>$SEP1</td><td>$SEP</td><td>$MPC</td></tr></table>"
+  
+    elif [ $STS = "paused" ]; then
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$MPC2</td><td>$SEP</td><td>$SEP1</td><td>$SEP</td><td>$MPC</td></tr></table>"
+  
+    else
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER$STOP</tr></table>"
+  
+    fi
+
+elif [ $1 = "command" ]; then
+
+  SEP=" "
+  SEP1="-"
+  PERC=`mpc|head -n 2|tail -n 1|awk '{ print $4 }'|sed 's/[^0-9]*//g'|awk '{print $1/100}'`
+  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
+  PLAY="<a href=\"exec:mpc toggle\"><img src=\"$THEMEDIR/BottomPanel/play.png\"width=\"16\"></a>"
+  PAUSE="<a href=\"exec:mpc toggle\"><img src=\"$THEMEDIR/BottomPanel/pause.png\"width=\"16\"></a>"
+  STOP="<a href=\"exec:mpc play\"><img src=\"$THEMEDIR/BottomPanel/stop.png\"width=\"16\"></a>"
+  FORWARD="<a href=\"exec:konsole -e ncmpcpp\"><img src=\"$THEMEDIR/BottomPanel/forward.png\"width=\"16\"></a>"
+  REWIND="<a href=\"exec:konsole -e ncmpcpp\"><img src=\"$THEMEDIR/BottomPanel/rewind.png\"width=\"16\"></a>"
+  
+    if [ $STS = "playing" ]; then
+    
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$REWIND</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$PAUSE</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$FORWARD</td></tr></table>"
+  
+    elif [ $STS = "paused" ]; then
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$REWIND</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$PLAY</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$FORWARD</td></tr></table>"
+  
+    else
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER$<td>$REWIND</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$STOP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$FORWARD</td></tr></table>"
+  
+    fi
+    
+elif [ $1 = "cover" ]; then
+
+  ART=`mpc -f "[%artist%]"|head -n 1`
+  ALB=`mpc -f "[%album%]"|head -n 1`
+  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
+  BG="background-color:trasparent"
+  DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+  
+  if [ $STS = "playing" ]; then
+      COV="<a href=\"exec:cantata\"><img src=\"$HOME/musica/$ART/$ALB/cover\"width=\"40\" /></a>"
+      echo "$DIVSTYLE$DIVHEADER$COV</tr></table>"
+  elif [ $STS = "paused" ]; then
+      COV="<a href=\"exec:cantata\"><img src=\"$HOME/musica/$ART/$ALB/cover\"width=\"40\" /></a>"
+      echo "$DIVSTYLE$DIVHEADER$COV</tr></table>"
+  else
+      NOCOV="<a href=\"exec:cantata\"><img src=\"$HOME/.kde4/share/apps/be.shell/Themes/Eve/BottomPanel/google-musicmanager.svg\"width=\"45\" /></a>"
+      echo "$DIVSTYLE$DIVHEADER$NOCOV</tr></table>"
+  fi
+
+elif [ $1 = "progress" ]; then
+
+  PRG="---------------"
+  PERC=`mpc|head -n 2|tail -n 1|awk '{ print $4 }'|sed 's/[^0-9]*//g'|awk '{print $1/100}'`
+  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
+  BAR="background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 ${STOPB}, stop: $(echo $PERC - 0.010|bc) ${STOPB},stop: ${PERC} ${STOPL}, stop: $(echo $PERC + 0.010|bc) ${STOPF},  stop: 1 ${STOPF}); color: transparent;"
+   
+    if [ $STS = "playing" ]; then
+    
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BAR}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$PRG</td></tr></table>"
+  
+    elif [ $STS = "paused" ]; then
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BAR}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$PRG</td></tr></table>"
+  
+    else
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$PRG</td></tr></table>"
+  
+    fi
+  
+elif [ $1 = "time" ]; then
+
+  SEP=" "
+  TIP="|"
+  NONE="--|--"
+  TIME=`mpc|head -n 2|tail -n 1|awk '{ print $3 }'|cut -d'/' -f1`
+  TOTAL=`mpc -f "[%time%]"|head -n 1`
+  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
+   
+    if [ $STS = "playing" ]; then
+    
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$TIME</td><td>$TIP</td><td>$TOTAL</td></tr></table>"
+  
+    elif [ $STS = "paused" ]; then
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$TIME</td><td>$TIP</td><td>$TOTAL</td></tr></table>"
+  
+    else
+  
+      BG="background-color:transparent"
+      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      echo "$DIVSTYLE$DIVHEADER<td>$NONE</td></tr></table>"
+  
+    fi
+    
+fi

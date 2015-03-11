@@ -1,0 +1,103 @@
+#!/bin/bash
+
+NORMAL="color:#000000;"
+STOPB="rgba(238,155,0,0)"
+STOPF="rgba(238,155,0,0)"
+STOPL="rgb(0,0,0)"
+HS="9pt"
+HF=""
+THEMEDIR="$HOME/.kde4/share/apps/be.shell/Themes/Eve/TopPanel"
+    
+if [ $1 = "wifi" ]; then
+
+  NET=`iwlist scan 2>/dev/null | sed -e '/Quality/!d; s/.*Quality=\([0-9]*\).*/\1/'`
+#  NET='wicd-cli -dy 2>/dev/null | sed -e '/Quality/!d;
+  
+    if [ $NET > 61 ]; then
+      echo "<img src=\"$THEMEDIR/nm-signal-100\" >"
+    elif [ $NET > 44 ]; then
+      echo "<img src=\"$THEMEDIR/nm-signal-75\" >"
+    elif [ $NET > 26 ]; then
+      echo "<img src=\"$THEMEDIR/nm-signal-50\" >"
+    elif [ $NET > 9 ]; then
+      echo "<img src=\"$THEMEDIR/nm-signal-25\" >"
+    else
+      echo "<img src=\"$THEMEDIR/noconnect\" >"
+    fi
+
+elif [ $1 = "mpc" ]; then
+
+  SEP=" "
+  SEP1="-"
+  MPC=`mpc -f "[%artist%]"|head -n 1`
+  MPC1=`mpc -f "[%title% ]"|head -n 1`
+  MPC2=`mpc -f "[%album%]"|head -n 1`
+  PERC=`mpc|head -n 2|tail -n 1|awk '{ print $4 }'|sed 's/[^0-9]*//g'|awk '{print $1/100}'`
+  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'`
+  PLAY="playing"
+  PAUSE="pause"
+  STOP="stop"
+  COS="mpd"
+  COS1="off"
+  BG="background-color:trasparent"
+  DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+      
+  if [ $STS = "[playing]" ]; then
+      echo "$DIVSTYLE$DIVHEADER</tr><td>$PLAY$SEP$SEP1$SEP$PERC</td>$MPC$SEP$SEP1$SEP$MPC1</tr></table>"
+  elif [ $STS = "[paused]" ]; then
+      echo "$DIVSTYLE$DIVHEADER</tr><td>$PAUSE$SEP$SEP1$SEP$PERC</td>$MPC$SEP$SEP1$SEP$MPC2</tr></table>"
+  else
+      echo "$DIVSTYLE$DIVHEADER</tr><td>$STOP</td>$COS$SEP$SEP1$SEP$COS1</tr></table>"
+  fi
+
+elif [ $1 = "cover" ]; then
+
+  ALB=`mpc -f "[%album%]"|head -n 1`
+  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'`
+  BG="background-color:trasparent"
+  DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+  
+  if [ $STS = "[playing]" ]; then
+      COV="<a href=\"exec:mpc toggle\"><img src=\"$HOME/immagini/cover/$ALB\"width=\"40\" /></a>"
+      echo "$DIVSTYLE$DIVHEADER$COV</tr></table>"
+  elif [ $STS = "[paused]" ]; then
+      COV="<a href=\"exec:mpc toggle\"><img src=\"$HOME/immagini/cover/$ALB\"width=\"40\" /></a>"
+      echo "$DIVSTYLE$DIVHEADER$COV</tr></table>"
+  else
+      COV="<a href=\"exec:konsole -e ncmpcpp\"><img src=\"$HOME/.kde4/share/apps/be.shell/Themes/Eve/BottomPanel/google-musicmanager.svg\"width=\"45\" /></a>"
+      echo "$DIVSTYLE$DIVHEADER$COV</tr></table>"
+  fi
+  
+elif [ $1 = "mail" ]; then
+
+  TEXT="e-mail "
+  username=
+  password=
+  plain=true
+  url="https://mail.google.com/mail/feed/atom"
+  COUNT=$(curl --silent --url "$url" --user $username:$password | sed -r 's/.*<fullcount>|<\/fullcount>.*//g')
+  MAIL="<a href=\"exec:kmail\"><img src=\"$THEMEDIR/mail.svg\"width=\"16\"></a>"
+    
+  if [ $COUNT == 0 ]; then
+    BG="background-color: transparent"
+    DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+    echo "$DIVSTYLE$DIVHEADER</tr></table>" 
+  else
+    BG="background-color: transparent"
+    DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+    echo "$DIVSTYLE$DIVHEADER$MAIL</tr></table>"
+  fi
+  
+elif [ $1 = "up" ]; then
+
+  UPR=`checkupdates | wc -l`
+  DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
+  
+  if [ $UPR == 0 ]; then
+    echo "$DIVSTYLE$DIVHEADER</tr></table>"
+  else
+    UPDATE="<a href=\"exec:konsole -e yaourt -Syyua --ignore linux-ck --ignore linux-ck-headers\"><img src=\"$THEMEDIR/update.png\"width=\"16\"></a>"
+    echo "$DIVSTYLE$DIVHEADER<td>$UPDATE</td></tr></table>"
+  fi
+  
+fi  
