@@ -25,13 +25,13 @@
 .BE--InfoCenter { color: transparent; image: url("${base}/TopPanel/info.png") no-repeat; align: center; max-width: 19px; padding: 0 2 0 0; }
 .BE--MediaTray { background-color: transparent; padding: 0 4 0 4; }
 .BE--MediaTray QToolButton { background-color: transparent; border: none; padding: 0 0 0 0; max-width: 18px; }
-.BE--Clock { background-color: transparent; padding: 0 0 0 0; font: 20px roboto condensed; color: rgba(0,0,0,255); }
+.BE--Clock { background-color: transparent; padding: 0 0 0 0; font: 20px roboto condensed; color: rgba(214,214,214,255); }
 .BE--Clock::hover { border-bottom: 2px solid rgba(0,0,0,255); }
 *:menu-indicator { image: none; }
 
 /* Fix for simple applets*/
 
-#tasks { background-color: transparent; }
+#tasks { background-color: rgba(240,240,240,200); border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
 
 #command { background-color: transparent; padding: 0 4 0 0; }
 #mpc { background-color: transparent; padding: 0 0 0 0; font: 9pt robotolight; color: rgba(0,0,0,255); }
