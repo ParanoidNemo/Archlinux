@@ -65,6 +65,6 @@ Modify the username & password in Scripts/applet mail section to use the mail sp
 
 ![Code2.jpeg](https://bitbucket.org/repo/EynnxG/images/486403133-Code2.jpeg)
 
-## **Void** ## - WIP
+## **Void** ##
 
 ![Void.png](http://s30.postimg.org/7zpp2acgx/Void4.png)
