@@ -19,6 +19,8 @@
   <action label="Inkscape" exec="inkscape"/>
   <action label="Karbon" exec="karbon"/>
   <action label="Krita" exec="krita"/>
+  <action label="Darktable" exec="darktable"/>
+  <action label="Scribus" exec="scribus"/>
 </menu>
 <menu label="Guide">
   <action label="VimTutor" exec="konsole --profile Editor --hold -e vimtutor; qdbus org.kde.kglobalaccel /component/kwin invokeShortcut 'Window Maximize Vertical'"/>
