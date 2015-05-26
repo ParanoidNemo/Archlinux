@@ -1,148 +1,144 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-NORMAL="color:#000000;"
-STOPB="rgba(50,50,50,200)"
-STOPF="rgba(180,180,180,200)"
-STOPL="rgba(0,0,0,255)"
-HS="9pt"
-HF=""
-THEMEDIR="$HOME/.kde4/share/apps/be.shell/Themes/Void"
+###################################################################################
+#We might want to set a theme name from command line, as third argument.
+#Oooooor taking the current one from be.shell config(BAD HOMBRE, BAD!).
+#Then we look for the be.shell folder position and set the theme dir as default
+#location for the script resources (icons and sourced scripts implementing markup)
+###################################################################################
 
-if [ $1 = "mpc" ]; then
-
-  SEP=" "
-  SEP1="|"
-  MPC=`mpc -f "[%artist%]"|head -n 1`
-  MPC1=`mpc -f "[%title% ]"|head -n 1`
-  MPC2=`mpc -f "[%album%]"|head -n 1`
-  MPC3=`mpc -f "[%track%]"|head -n 1`
-  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
-    
-    if [ $STS = "playing" ]; then
-    
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$MPC1</td><td>$SEP</td><td>$SEP1</td><td>$SEP</td><td>$MPC</td></tr></table>"
-  
-    elif [ $STS = "paused" ]; then
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$MPC2</td><td>$SEP</td><td>$SEP1</td><td>$SEP</td><td>$MPC</td></tr></table>"
-  
-    else
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER$STOP</tr></table>"
-  
-    fi
-
-elif [ $1 = "command" ]; then
-
-  SEP=" "
-  SEP1="-"
-  PERC=`mpc|head -n 2|tail -n 1|awk '{ print $4 }'|sed 's/[^0-9]*//g'|awk '{print $1/100}'`
-  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
-  PLAY="<a href=\"exec:mpc toggle\"><img src=\"$THEMEDIR/BottomPanel/play.png\"width=\"16\"></a>"
-  PAUSE="<a href=\"exec:mpc toggle\"><img src=\"$THEMEDIR/BottomPanel/pause.png\"width=\"16\"></a>"
-  STOP="<a href=\"exec:mpc play\"><img src=\"$THEMEDIR/BottomPanel/stop.png\"width=\"16\"></a>"
-  FORWARD="<a href=\"exec:konsole -e ncmpcpp\"><img src=\"$THEMEDIR/BottomPanel/forward.png\"width=\"16\"></a>"
-  REWIND="<a href=\"exec:konsole -e ncmpcpp\"><img src=\"$THEMEDIR/BottomPanel/rewind.png\"width=\"16\"></a>"
-  
-    if [ $STS = "playing" ]; then
-    
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$REWIND</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$PAUSE</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$FORWARD</td></tr></table>"
-  
-    elif [ $STS = "paused" ]; then
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$REWIND</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$PLAY</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$FORWARD</td></tr></table>"
-  
-    else
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER$<td>$REWIND</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$STOP</td><td>$SEP</td><td>$SEP</td><td>$SEP</td><td>$FORWARD</td></tr></table>"
-  
-    fi
-    
-elif [ $1 = "cover" ]; then
-
-  ART=`mpc -f "[%artist%]"|head -n 1`
-  ALB=`mpc -f "[%album%]"|head -n 1`
-  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
-  BG="background-color:trasparent"
-  DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-  
-  if [ $STS = "playing" ]; then
-      COV="<a href=\"exec:cantata\"><img src=\"$HOME/musica/$ART/$ALB/cover\"width=\"40\" /></a>"
-      echo "$DIVSTYLE$DIVHEADER$COV</tr></table>"
-  elif [ $STS = "paused" ]; then
-      COV="<a href=\"exec:cantata\"><img src=\"$HOME/musica/$ART/$ALB/cover\"width=\"40\" /></a>"
-      echo "$DIVSTYLE$DIVHEADER$COV</tr></table>"
-  else
-      NOCOV="<a href=\"exec:cantata\"><img src=\"$HOME/.kde4/share/apps/be.shell/Themes/Eve/BottomPanel/google-musicmanager.svg\"width=\"45\" /></a>"
-      echo "$DIVSTYLE$DIVHEADER$NOCOV</tr></table>"
-  fi
-
-elif [ $1 = "progress" ]; then
-
-  PRG="---------------"
-  PERC=`mpc|head -n 2|tail -n 1|awk '{ print $4 }'|sed 's/[^0-9]*//g'|awk '{print $1/100}'`
-  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
-  BAR="background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 ${STOPB}, stop: $(echo $PERC - 0.010|bc) ${STOPB},stop: ${PERC} ${STOPL}, stop: $(echo $PERC + 0.010|bc) ${STOPF},  stop: 1 ${STOPF}); color: transparent;"
-   
-    if [ $STS = "playing" ]; then
-    
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BAR}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$PRG</td></tr></table>"
-  
-    elif [ $STS = "paused" ]; then
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BAR}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$PRG</td></tr></table>"
-  
-    else
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$PRG</td></tr></table>"
-  
-    fi
-  
-elif [ $1 = "time" ]; then
-
-  SEP=" "
-  TIP="|"
-  NONE="--|--"
-  TIME=`mpc|head -n 2|tail -n 1|awk '{ print $3 }'|cut -d'/' -f1`
-  TOTAL=`mpc -f "[%time%]"|head -n 1`
-  STS=`mpc status|head -n 2|tail -n 1|awk '{ print $1 }'|sed 's/[^a-z]*//g'`
-   
-    if [ $STS = "playing" ]; then
-    
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$TIME</td><td>$TIP</td><td>$TOTAL</td></tr></table>"
-  
-    elif [ $STS = "paused" ]; then
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$TIME</td><td>$TIP</td><td>$TOTAL</td></tr></table>"
-  
-    else
-  
-      BG="background-color:transparent"
-      DIVHEADER="<table valign="middle" cellspacing="0" cellpadding="0" style=\"${BG}\"><tr>"
-      echo "$DIVSTYLE$DIVHEADER<td>$NONE</td></tr></table>"
-  
-    fi
-    
+if [[ -n "$3" ]]; then #If the script has a third ARG, it is used as theme name
+   preferredTheme="${3}"
+else # the following is to be considered BAD!
+   preferredTheme=$( kreadconfig --file be.shell --group BE::Shell --key Theme )
 fi
+
+#Trying to get the config dir without involving kde4-config --localprefix
+
+if [[ -d "$HOME/.kde4/share/apps/be.shell" ]]; then
+   confDir="$HOME/.kde4/share/apps/be.shell" #openSuse, Gentoo & Arch 
+else
+   confDir="$HOME/.kde/share/apps/be.shell" #Debian, Ubuntu & Fedora
+fi
+
+#Setting theme directory:
+THEMEDIR="$confDir/Themes/$preferredTheme"
+
+###################################################################################
+#Best case scenario: this is just pure shit™. Potentially slower and/or dangerous.
+#Blame me later. Just experimenting to see if we can get a clean script with
+#BE::Shell themes support.
+#Now we implements functions. Each function is deputed to solve a specific task,
+#we then later call one of them as first parameter for this script.
+#The functions have few lines of code, the remaining is sourced (myOutputFile)
+#and contains the formatted output. 
+#Sourced files don't require permissions to be executable, pay attention on what 
+#you put in there.
+#Notice! Any variable from above or within the function can be reassigned from 
+#the sourced file. Further vars can be declared and used the same way.
+###################################################################################
+
+music(){
+
+myOutputFile="$THEMEDIR/Scripts/mpc" 
+
+#Music directory: assuming the xdg dir is in use:
+#MUSICDIR=$( xdg-user-dir MUSIC )
+#Checking player status:
+STS=$( mpc status| awk 'NR == 2 { print $1 }'| tr -d '[]' )
+#MPC infos:
+ARTIST=$( mpc -f "[%artist%]"|head -n 1 )
+TITLE=$( mpc -f "[%title% ]"|head -n 1 )
+ALBUM=$( mpc -f "[%album%]"|head -n 1 )
+TOTAL=$( mpc -f "[%time%]"|head -n 1 )
+TIME=$( mpc status| awk 'NR == 2 { print  $3 }'| cut -d'/' -f1 )
+#awk command refined by izabera:
+PERC=$( mpc status | awk 'NR == 2 { gsub("[()]",""); print $4/100 }' )
+
+source "${myOutputFile}"
+
+}
+
+mail(){
+
+myOutputFile="$THEMEDIR/Scripts/mail" 
+
+#Your gmail username, as in username@gmail.com
+username=""
+#I mean: this is safe, right? O.o  
+password=""
+#Retrieving infos & counting unread mails:
+url="https://mail.google.com/mail/feed/atom"
+COUNT=$(curl --silent --url "$url" --user $username@gmail.com:$password | sed -r 's/.*<fullcount>|<\/fullcount>.*//g')
+
+source "${myOutputFile}"
+
+}
+
+updates(){
+
+myOutputFile="$THEMEDIR/Scripts/updates" 
+
+#Need to test this and write something for zypper (suse)
+if hash aptitude 2>/dev/null; then  #deb based distros
+    UPR=$( aptitude search "~U" | wc -l )
+elif hash yum 2>/dev/null; then #fedora, probably broken
+    UPR=$( yum check-update | wc -l )
+else #Arch
+    UPR=$( checkupdates | wc -l )
+    AUR=$( cower --quiet -u | wc -l )
+fi
+
+source "${myOutputFile}"
+
+}
+
+wifi(){ #I'd recommend to use a front end for your network manager instead of this :(
+
+# TODO as usual Thomas wrote the best code for this, unfortunately broken nowadays due to the 
+#adoption of netctl. Implementing a similar approach would be definately better for the purpose,
+#although this applet should really be unnecessary, since there are good GUI for many NM, out there.
+
+NET=$( iwlist scan 2>/dev/null | sed -e '/Quality/!d; s/.*Quality=\([0-9]*\).*/\1/' )
+
+if [[ "$NET" -gt "61" ]]; then
+   echo "<img src=\"$THEMEDIR/TopPanel/nm-signal-100\" >"
+elif [[ "$NET" -gt "44" ]]; then
+   echo "<img src=\"$THEMEDIR/TopPanel/nm-signal-75\" >"
+elif [[ "$NET" -gt "26" ]]; then
+   echo "<img src=\"$THEMEDIR/TopPanel/nm-signal-50\" >"
+elif [[ "$NET" -gt "9" ]]; then
+   echo "<img src=\"$THEMEDIR/TopPanel/nm-signal-25\" >"
+else
+   echo "<img src=\"$THEMEDIR/TopPanel/noconnect\" >"
+fi
+
+}
+
+###################################################################################
+#Looking for the first ARG after the script name, calling associated function if 
+#there is a match, If not, just display an useful message about alcohol addiction.
+#Still error-prone. TODO check if the file to be sourced exists and if we have a 
+#second argument, otherwise get the hell out of here.
+###################################################################################
+
+case $1 in
+    mpc) #Function music takes a param itself:
+        music "$2"
+        ;;
+    mail) 
+        mail
+        ;;
+    up)
+        updates
+        ;;
+    wifi)
+        wifi
+        ;;
+    *)
+        echo "Hombre: you're drunk.Again -.-"
+        exit 1
+        ;;
+esac
+
+#EOF
