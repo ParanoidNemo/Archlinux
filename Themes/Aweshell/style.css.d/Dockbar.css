@@ -1,21 +1,10 @@
 #Dockbar {
-    background-color: transparent;
+    background-color: rgba(0,0,0,80%);
 }
 
 #dock {
-    background-color: rgba(0,0,0,100%);
-}
-
-#OneTask, #ManyTasks { 
-    background-color: transparent;
-    border: none;
-    padding: 0 0 0 0;
-}
-
-#OneTask:hover, #ManyTasks:hover {
-    background-color: transparent;
-    border: none;
-    padding: 0 0 0 0;
+    background-color: rgba(0,0,0,80%);
+    padding: 10 0 10 0;
 }
 
 #OneTask:checked, #ManyTasks:checked {
@@ -24,9 +13,11 @@
     padding: 0 0 0 0;
 }
 
-.BE--Task {
-    background-color: transparent;
+.BE--Task, #OneTask, #ManyTasks, #OneTask:hover, #ManyTasks:hover {
     border: none;
     padding: 0 0 0 0;
 }
-    
+
+.BE--Task, #OneTask, #ManyTasks {
+    background-color: transparent;
+}
