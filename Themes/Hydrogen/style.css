@@ -1,0 +1,10 @@
+/* Hydrogen theme for BE::Shell created by Andrea Calzavacca (paranoid.nemo@gmail.com)
+This is the main style configuration file, the other one can be found into the
+style.css.d dir. */
+
+/* Principal Panel style settings */
+
+#BottomPanel {
+  background-color: rgba(0,0,0,100%);
+  border: none;
+}

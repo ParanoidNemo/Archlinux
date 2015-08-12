@@ -1,0 +1,30 @@
+/* Task theme configuration file */
+
+.BE--Task, #OneTask, #ManyTasks {
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid rgba(255,255,255,0%);
+  padding: 0 0 0 0;
+  max-width: 52px;
+}
+
+.BE--Task:hover, #OneTask:hover, #ManyTasks:hover {
+  background-color: rgba(150,150,150,100%);
+  border: none;
+  border-top: 2px solid rgba(255,255,255,0%);
+  padding: 0 0 0 0;
+}
+
+#OneTask:enabled, #ManyTasks:enabled {
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid rgba(180,180,180,100%);
+  padding: 0 0 0 0;
+}
+
+#OneTask:checked, #ManyTasks:checked {
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid rgba(255,255,255,100%);
+  padding: 0 0 0 0;
+}
