@@ -5,6 +5,48 @@ style.css.d dir. */
 /* Principal Panel style settings */
 
 #BottomPanel {
-  background-color: rgba(0,0,0,100%);
-  border: none;
+    background-color: rgba(0,0,0,100%);
+    border: none;
+}
+
+#NotificationsPanel {
+    background-color: rgba(0,0,0,80%);
+    border: none
+}
+
+#workspace {
+    background-color: transparent;
+    border: none;
+    padding: 0 8 0 10;
+}
+
+#workspace:hover {
+    background-color: rgba(125,118,109,50%);
+}
+
+#search {
+    background-color: rgba(125,118,109,50%);
+    border: none;
+    padding: 0 8 0 8;
+}
+
+#toggleNotifications, .BE--Volume {
+    background-color: transparent;
+    border: none;
+    padding: 4 4 0 4;
+}
+
+#toggleNotifications:hover, .BE--Volume:hover {
+    background-color: rgba(125,118,109,50%);
+}
+
+.BE--Volume {
+    max-width: 16px;
+    padding: 0 4 0 4;
+    border: none;
+    margin: 0 0 0 0;
+}
+
+#test {
+    color: rgba(255,255,255,100%);
 }

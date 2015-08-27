@@ -3,28 +3,24 @@
 .BE--Task, #OneTask, #ManyTasks {
   background-color: transparent;
   border: none;
-  border-top: 2px solid rgba(255,255,255,0%);
+  border-bottom: 2px solid rgba(255,255,255,0%);
   padding: 0 0 0 0;
   max-width: 52px;
 }
 
-.BE--Task:hover, #OneTask:hover, #ManyTasks:hover {
-  background-color: rgba(150,150,150,100%);
-  border: none;
-  border-top: 2px solid rgba(255,255,255,0%);
-  padding: 0 0 0 0;
-}
-
 #OneTask:enabled, #ManyTasks:enabled {
-  background-color: transparent;
-  border: none;
-  border-top: 2px solid rgba(180,180,180,100%);
-  padding: 0 0 0 0;
+    background-image: url("${base}/background_images/checked.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    border: none;
+    padding: 0 0 0 0;
 }
 
-#OneTask:checked, #ManyTasks:checked {
-  background-color: transparent;
+#OneTask:checked, #ManyTasks:checked, .BE--Task:hover, #OneTask:hover, #ManyTasks:hover {
+  background-color: rgba(125,118,109,50%);
+  background-image: url("${base}/background_images/active.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
   border: none;
-  border-top: 2px solid rgba(255,255,255,100%);
   padding: 0 0 0 0;
 }

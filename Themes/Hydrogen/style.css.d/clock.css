@@ -3,9 +3,9 @@
 .BE--Clock {
   color: rgba(255,255,255,100%);
 /*  font-size: 16px;*/
-  padding: 0 4 0 4;
+  padding: 4 4 0 4;
 }
 
 .BE--Clock:hover {
-  background-color: rgba(150,150,150,100%);
+  background-color: rgba(125,118,109,50%);
 }
