@@ -14,7 +14,7 @@ WallpaperAspect=-1
 WallpaperMode=7
 
 [BE::Shell]
-Panels=BottomPanel
+Panels=BottomPanel,NotificationsPanel
 Theme=Hydrogen
 
 [Be::Desk]
@@ -26,7 +26,7 @@ ShowIcons=false
 TrashCan=false
 
 [BottomPanel]
-Applets=task,stretch,clock
+Applets=search,workspace,task,stretch,Volume,toggleNotifications,clock
 BlurRadius=0
 CastShadow=true
 Frozen=false
@@ -36,9 +36,47 @@ Length=100
 Offset=0
 Position=1
 Screen=-1
-Size=36
+Size=40
 Struts=true
 Visible=true
+
+[NotificationsPanel]
+Applets=test
+BlurRadius=0
+CastShadow=True
+Frozen=False
+Id=NotificationsPanel
+Layer=0
+Length=95
+Offset=0
+Position=3
+Screen=-1
+Size=400
+Struts=False
+Visibile=True
+
+[test]
+FiFo=/home/nemo/.local/share/be.shell/fifo/test
+Lines=1
+PollInterval=1000
+Type=Label
+
+[toggleNotifications]
+Exec=qdbus org.kde.be.shell /Shell togglePanel NotificationsPanel
+Icon=notifications
+IconSize=16
+Label=Notifications
+Mode=0
+Type=Button
+
+[workspace]
+DBus=session;org.kde.kglobalaccel;/component/kwin;org.kde.kglobalaccel.Component;invokeShortcut;ShowDesktopGrid
+Icon=workspace
+IconSize=24
+Label=Workspace
+ToolTip=Workspace
+Mode=0
+Type=Button
 
 [browser]
 Exec=firefox
@@ -49,7 +87,7 @@ Mode=0
 Type=Button
 
 [clock]
-Pattern='<html>'dd/MM - <b>hh:mmap</b>'</html>'
+Pattern='<html>'dd/MM - <b>hh:mm.ap</b>'</html>'
 Type=Clock
 
 [download]
@@ -69,7 +107,7 @@ Mode=0
 Type=Button
 
 [file-manager]
-Exec=dfm
+Exec=dolphin
 Icon=dolphin
 IconSize=32
 Label=File
@@ -87,7 +125,7 @@ Type=Button
 [task]
 AlwaysGroup=True
 ButtonMode=0
-Buttons=file-manager,browser,terminal,editor,irc,download
+Buttons=file-manager,browser,terminal,editor,irc,download,qdbus-viewer
 IconSize=32
 OnlyCurrentDesk=False
 OnlyMinimized=False
@@ -101,3 +139,25 @@ IconSize=32
 Label=Terminal
 Mode=0
 Type=Button
+
+[qdbus-viewer]
+Exec=qdbusviewer-qt5
+Icon=qdbusviewer
+IconSize=32
+Label=QDBus-Viewer
+Mode=0
+Type=Button
+
+[search]
+Exec=qdbus org.kde.krunner /App display
+Icon=search
+IconSize=18
+Label=Finder
+Mode=0
+Type=Button
+
+[Volume]
+Channel=Master
+MixerCommand=kmix
+Step=5%
+Type=Volume
