@@ -129,7 +129,7 @@ Buttons=file-manager,browser,terminal,editor,irc,download,qdbus-viewer
 IconSize=32
 OnlyCurrentDesk=False
 OnlyMinimized=False
-Spacing=0
+Spacing=1
 Type=Taskbar
 
 [terminal]
