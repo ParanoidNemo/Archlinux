@@ -1,0 +1,53 @@
+/* Hydrogen theme for BE::Shell created by Andrea Calzavacca (paranoid.nemo@gmail.com)
+This is the main style configuration file, the other one can be found into the
+style.css.d dir. */
+
+/* Principal Panel style settings */
+
+#BottomPanel {
+    background-color: rgba(0,0,0,100%);
+    border: none;
+    border-top: 1px solid rgba(0,0,0,100%);
+}
+
+#NotificationsPanel {
+    background-color: rgba(0,0,0,85%);
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border: 0 0 0 1;
+    border-color: rgba(255,255,255,100%);
+    border-style: outset;
+}
+
+#workspace {
+    background-color: transparent;
+    border: none;
+    padding: 0 8 0 10;
+}
+
+#workspace:hover {
+    background-color: rgba(125,118,109,30%);
+}
+
+#search {
+    background-color: transparent;
+    border: none;
+    padding: 0 10 0 10;
+}
+
+#toggleNotifications, .BE--Volume {
+    background-color: transparent;
+    border: none;
+    padding: 4 4 0 4;
+}
+
+#toggleNotifications:hover, .BE--Volume:hover {
+    background-color: rgba(125,118,109,50%);
+}
+
+.BE--Volume {
+    max-width: 16px;
+    padding: 0 4 0 4;
+    border: none;
+    margin: 0 0 0 0;
+}
