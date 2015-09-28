@@ -5,14 +5,9 @@ style.css.d dir. */
 /* Principal Panel style settings */
 
 #BottomPanel {
-    background-color: rgba(0,0,0,90%);
+    background-color: rgba(0,0,0,100%);
     border: none;
-    border-top: 1px solid transparent;
-}
-
-#NotificationsPanel {
-    background-color: rgba(0,0,0,85%);
-    border: none
+    border-top: 1px solid rgba(0,0,0,100%);
 }
 
 #workspace {
@@ -22,13 +17,13 @@ style.css.d dir. */
 }
 
 #workspace:hover {
-    background-color: rgba(125,118,109,50%);
+    background-color: rgba(125,118,109,30%);
 }
 
 #search {
-    background-color: rgba(125,118,109,50%);
+    background-color: transparent;
     border: none;
-    padding: 0 8 0 8;
+    padding: 0 10 0 10;
 }
 
 #toggleNotifications, .BE--Volume {
@@ -46,8 +41,4 @@ style.css.d dir. */
     padding: 0 4 0 4;
     border: none;
     margin: 0 0 0 0;
-}
-
-#test {
-    color: rgba(255,255,255,100%);
 }

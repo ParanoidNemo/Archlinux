@@ -1,0 +1,10 @@
+# This is the format file for fs info thread in twolame
+# The allowed entry are
+# {0} - name of the mounted file system
+# {1} - amount of free space (Gb)
+# {2} - total space (Gb)
+# {3} - amount of used space (Gb)
+# {4} - percentage of free space (Gb)
+# {5} - percentage of used space (Gb)
+
+<table><tr><td>{0}</td></tr><tr><td>free space:</td><td style="padding-left:20">{1}Gb</td><td align=right style="padding-left:20">{4} %</td></tr></table>

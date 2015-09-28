@@ -1,0 +1,27 @@
+#NotificationsPanel {
+    background-color: rgba(0,0,0,85%);
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border: 0 0 0 1;
+    border-color: rgba(255,255,255,100%);
+    border-style: outset;
+}
+
+#FileSystem {
+    background: transparent;
+}
+
+#storage {
+    color: rgba(255,255,255,100%);
+    font-size: 10pt;
+    padding: 0 4 0 4;
+    border: none;
+}
+
+#open {
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid rgba(255,255,255,100%);
+    padding: 0 4 0 4;
+    max-width: 100px;
+}
