@@ -1,0 +1,28 @@
+/*Pager*/
+
+.BE--Pager {
+  background-color:transparent;
+  border: none;
+  margin: 6 0 6 0;
+}
+
+.BE--Pager QToolButton, .BE--Pager QToolButton:checked, .BE--Pager QToolButton:hover {
+    padding: 0 2 0 2;
+    border: none;
+}
+
+.BE--Pager QToolButton {
+    background-color: transparent;
+    color: rgba(255,255,255,100%);
+}
+
+.BE--Pager QToolButton:checked {
+    background-color: rgba(200,200,200,100%);
+    border-radius: 2px;
+    color: rgba(0,0,0,100%);
+}
+
+.BE--Pager QToolButton:hover {
+    background-color: transparent;
+    color: rgba(255,255,255,100%);
+}
