@@ -10,6 +10,16 @@ style.css.d dir. */
     border-top: 1px solid rgba(0,0,0,100%);
 }
 
+#TopPanel {
+    border: none;
+}
+
+#PagerPanel {
+    background-color: rgba(10,10,10,80%);
+    border: none;
+    margin: 0 0 0 0;
+}
+
 #workspace {
     background-color: transparent;
     border: none;
@@ -37,8 +47,8 @@ style.css.d dir. */
 }
 
 .BE--Volume {
-    max-width: 16px;
-    padding: 0 4 0 4;
+    max-width: 20px;
+    padding: 0 0 0 0;
     border: none;
-    margin: 0 0 0 0;
+    margin: 2 4 0 0;
 }
