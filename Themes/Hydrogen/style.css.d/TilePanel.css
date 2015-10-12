@@ -6,7 +6,7 @@
 
 /*Tiles specific settings*/
 
-#settings, #network, #fs, #bla2 {
+#settings, #network, #fs, #notify {
     background-color: rgba(200,200,200,100%);
     color: rgba(0,0,0,100%);
     min-height: 50px;
@@ -22,6 +22,6 @@
     margin: 2 1 2 1;
 }
 
-#bla2 {
+#notify {
     margin: 2 2 2 1;
 }

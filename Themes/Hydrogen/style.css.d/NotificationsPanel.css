@@ -11,7 +11,7 @@
     background: transparent;
 }
 
-#storage {
+#storage, #email, #up {
     color: rgba(255,255,255,100%);
     font-size: 10pt;
     padding: 4 4 0 4;
