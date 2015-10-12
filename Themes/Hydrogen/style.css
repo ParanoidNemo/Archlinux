@@ -26,7 +26,12 @@ style.css.d dir. */
     padding: 0 8 0 10;
 }
 
-#workspace:hover {
+#user {
+    background-color: transparent;
+    border: none;
+}
+
+#workspace:hover, #user:hover {
     background-color: rgba(125,118,109,30%);
 }
 
@@ -36,13 +41,13 @@ style.css.d dir. */
     padding: 0 10 0 10;
 }
 
-#toggleNotifications, .BE--Volume {
+#toggleNotifications, .BE--Volume, #media {
     background-color: transparent;
     border: none;
     padding: 4 4 0 4;
 }
 
-#toggleNotifications:hover, .BE--Volume:hover {
+#toggleNotifications:hover, .BE--Volume:hover, #info:hover, #media:hover {
     background-color: rgba(125,118,109,50%);
 }
 
@@ -50,5 +55,21 @@ style.css.d dir. */
     max-width: 20px;
     padding: 0 0 0 0;
     border: none;
-    margin: 2 4 0 0;
+    margin: 0 4 0 4;
+}
+
+#media QToolButton {
+    background-color: transparent;
+    border: none;
+    max-width: 20px;
+}
+
+#info {
+    padding: 2 -4 0 0;
+    font-family: RobotoLight;
+    font-size: 12px;
+}
+
+*:menu-indicator {
+    image: none;
 }
