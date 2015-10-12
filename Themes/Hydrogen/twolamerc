@@ -22,38 +22,42 @@
 
 [twolame]
 # choose what module you want to start
-start_music = 0
-start_kdeconnect = 0
+start_mail = 1
 start_fs = 1
+start_update = 1
 
-#---------------------------------------------------------------------------
-
-[kdeconnect]
-
-# Refresh period (s)
-update_period = 10
-
-# Table dimensions (px)
-table_width = 360
-table_height = 50
-cell_spacing = 5
-cell_padding = 4
-table_border = 0
-
-# Maximum length of fields (char)
-length_name = 30
-length_notifications = 50
-
-# CSS file name (str)
-css_file = kdeconnect.css
-
-# Miscellaneus icons (image)
-tablet_icon =
-smartphone_icon =
-pc_icon =
+# define the css file
+css_file = twolame.css
 
 #------------------------------FileSystem---------------------------------------
 
 [fs]
 
-update_period = 60
+# set the time between fs info update in seconds
+update_period = 600
+
+# define the number and path for the mount point (default 2, / and home)
+mnt_num = 2
+mount_point0 = /
+mount_point1 = ~
+#mount_point2 =
+#mount_point3 =
+#mount_point4 =
+
+#---------------------------------Mail------------------------------------------
+
+[mail]
+
+update_period = 600
+security = imap
+server = imap.gmail.com
+user = 
+password =
+plain = False
+service = gmail
+
+#--------------------------------Update-----------------------------------------
+
+[update]
+
+update_period = 600
