@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) --><svg height="297mm" id="svg2" inkscape:version="0.43" sodipodi:docbase="/home/winston/Desktop/Patent/SVG" sodipodi:docname="speaker.svg" sodipodi:version="0.32" width="210mm" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
+  <metadata>
+    <rdf:RDF xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <cc:Work rdf:about="">
+        <dc:title>Speaker Icon</dc:title>
+        <dc:description>A generic iconic representation of a speaker.</dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>speaker</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://www.openclipart.org/">
+            <dc:title>Seattle Software Systems</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Winston Williams</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Public Domain</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date>August 1, 2006</dc:date>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://web.resource.org/cc/PublicDomain"/>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs5"/>
+  <sodipodi:namedview bordercolor="#666666" borderopacity="1.0" id="base" inkscape:current-layer="svg2" inkscape:cx="418.93342" inkscape:cy="594.66007" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="575" inkscape:window-width="797" inkscape:window-x="236" inkscape:window-y="73" inkscape:zoom="0.46693274" pagecolor="#ffffff"/>
+  <rect height="186.93285" id="rect1308" rx="0" ry="15.066265" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.69999981;stroke-dasharray:none;stroke-opacity:1" width="321.52448" x="19.157988" y="389.21817"/>
+  <path d="M 86.453858,480.8152 L 340.68253,207.89323 L 340.68253,759.34516 L 86.453858,484.55387 L 86.453858,480.8152 z " id="rect3839" sodipodi:nodetypes="ccccc" style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.69999981;stroke-opacity:1"/>
+  <path d="M 441.16349,750.13165 C 441.85876,750.13694 442.40563,750.13165 443.10215,750.13165 C 591.69131,750.13165 712.18719,629.24805 712.18719,480.65889 C 712.18719,332.06971 591.69131,211.57384 443.10215,211.57384" id="path4688" sodipodi:nodetypes="csss" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:15.50922298;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.69999981;stroke-dasharray:none;stroke-opacity:1"/>
+  <path d="M 422.24539,664.25585 C 422.7142,664.25942 423.08294,664.25585 423.55259,664.25585 C 523.74482,664.25585 604.99398,582.74523 604.994,482.55302 C 604.994,382.3608 523.74482,301.11162 423.55259,301.11162" id="path4708" sodipodi:nodetypes="csss" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:11.63191795;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.69999981;stroke-dasharray:none;stroke-opacity:1"/>
+  <path d="M 403.77817,576.61261 C 404.01346,576.61442 404.19853,576.61261 404.43422,576.61261 C 454.71707,576.61261 495.49311,535.70538 495.49311,485.42253 C 495.49311,435.13966 454.71707,394.36363 404.43422,394.36363" id="path4710" sodipodi:nodetypes="csss" style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:7.75461149;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5.69999981;stroke-dasharray:none;stroke-opacity:1"/>
+</svg>
