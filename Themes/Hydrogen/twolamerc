@@ -25,6 +25,7 @@
 start_mail = 1
 start_fs = 1
 start_update = 1
+start_music = 1
 
 # define the css file
 css_file = twolame.css
@@ -61,3 +62,11 @@ service = gmail
 [update]
 
 update_period = 600
+
+#---------------------------------Music-----------------------------------------
+
+[music]
+
+update_period = 5
+port = 6600
+cover_path = ~/musica
