@@ -1,0 +1,9 @@
+# This is the format file for fs info thread in twolame
+# The allowed entry are
+# {cover}                       - link to cover image
+# {x}                       - link to the css file
+
+<html><head><link href="{x}" rel="stylesheet" type="text/css"></head>
+<table width="400">
+<tr><td align="center" valign="middle"><a href="exec:cantata"><img src="{cover}" width=400/></a></td></tr>
+</table></html>
