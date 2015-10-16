@@ -1,0 +1,7 @@
+# This is the format file for fs info thread in twolame
+# The allowed entry are
+# {0}                       - Track Number
+# {1}                       - Title
+# {2}                       - Artist
+
+<tr><td width="5%">{0}</td><td width="5%"> -- </td><td width="50%">{1}</td><td width="40%">{2}</td></tr>
