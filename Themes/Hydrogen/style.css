@@ -41,7 +41,7 @@ style.css.d dir. */
     padding: 0 10 0 10;
 }
 
-#toggleNotifications, .BE--Volume, #media {
+#toggleNotifications, .BE--Volume {
     background-color: transparent;
     border: none;
     padding: 4 4 0 4;
@@ -58,14 +58,21 @@ style.css.d dir. */
     margin: 0 4 0 4;
 }
 
+#media {
+    background-color: transparent;
+    border: none;
+    padding: 0 4 0 4;
+}
+
 #media QToolButton {
     background-color: transparent;
     border: none;
+    padding: 2 2 0 2;
     max-width: 20px;
 }
 
 #info {
-    padding: 2 -4 0 0;
+    padding: 2 -6 0 0;
     font-family: RobotoLight;
     font-size: 12px;
 }
