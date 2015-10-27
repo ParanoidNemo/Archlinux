@@ -10,6 +10,7 @@
     background-color: rgba(200,200,200,100%);
     color: rgba(0,0,0,100%);
     min-height: 50px;
+    max-height: 50px;
     max-width: 100px;
     border: none;
 }
