@@ -26,6 +26,7 @@ start_mail = 1
 start_fs = 1
 start_update = 1
 start_music = 1
+start_cloud = 1
 
 # define the css file
 css_file = twolame.css
@@ -38,6 +39,7 @@ css_file = twolame.css
 update_period = 600
 
 # define the number and path for the mount point (default 2, / and home)
+fm = dolphin
 mnt_num = 2
 mount_point0 = /
 mount_point1 = ~
@@ -52,7 +54,7 @@ mount_point1 = ~
 update_period = 600
 security = imap
 server = imap.gmail.com
-user = 
+user = andrea.calzavacca@gmail.com
 password =
 plain = False
 service = gmail
@@ -70,3 +72,19 @@ update_period = 600
 update_period = 5
 port = 6600
 cover_path = ~/musica
+
+#---------------------------------Cloud-----------------------------------------
+
+[cloud]
+
+update_period = 600
+
+local = ~/cloud/dropbox
+local1 = ~/cloud/andrea
+local2 = ~/cloud/paranoid
+
+use_rclone = 1
+rclone_config = /home/nemo/.rclone.conf
+
+use_mega = 1
+size = gb
