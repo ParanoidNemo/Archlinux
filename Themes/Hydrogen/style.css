@@ -1,5 +1,5 @@
-/* Hydrogen theme for BE::Shell created by Andrea Calzavacca (paranoid.nemo@gmail.com)
-This is the main style configuration file, the other one can be found into the
+/*This is the main style configuration file, the other one can be found into the
+Hydrogen theme for BE::Shell created by Andrea Calzavacca (paranoid.nemo@gmail.com)
 style.css.d dir. */
 
 /* Principal Panel style settings */
@@ -12,6 +12,10 @@ style.css.d dir. */
 
 #TopPanel {
     border: none;
+}
+
+#Container {
+    background-color: transparent;
 }
 
 #PagerPanel {
