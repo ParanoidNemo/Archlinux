@@ -7,12 +7,11 @@
 # {3} - amount of used space (Gb)
 # {4} - percentage of free space (Gb)
 # {5} - percentage of used space (Gb)
-# kde-open {0}
+# {e} - file manager
 
 <html><head><link href="{x}" rel="stylesheet" type="text/css"></head>
 <table width="392">
-<tr><td width="25%">{0}</td><td width="25%"></td><td width="20%"></td><td id="push" rowspan="2" align="center" valign="middle" width="30%">open</td></tr><tr><td>free space:</td><td align="right">{1}/{2} Gb</td><td align="right">{4}%</td></tr>
+<tr><td width="25%">{0}</td><td width="25%"></td><td width="20%"></td><td id="push" rowspan="2" align="center" valign="middle" width="30%"><a href="exec:{e} {0}">open</a></td></tr><tr><td>free space:</td><td align="right">{1}/{2} Gb</td><td align="right">{4}%</td></tr>
 <tr></tr>
-<tr><td>{6}</td><td></td><td></td><td id="push" rowspan="2" align="center" valign="middle">open</td></tr><tr><td>free space:</td><td align="right">{7}/{8} Gb</td><td align="right">{10}%</td></tr>
-<tr><td colspan="5"><hr width="98%" /></td></tr>
+<tr><td>{6}</td><td></td><td></td><td id="push" rowspan="2" align="center" valign="middle"><a href="exec:{e} {6}">open</a></td></tr><tr><td>free space:</td><td align="right">{7}/{8} Gb</td><td align="right">{10}%</td></tr>
 </table></html>
