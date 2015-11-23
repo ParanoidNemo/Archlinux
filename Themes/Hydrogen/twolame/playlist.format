@@ -5,5 +5,5 @@
 # {2}                       - Artist
 # {3}                       - Length time for the song
 
-<tr><td width="5%">{0}</td><td width="50%">{1}</td><td width="34%"></td><td align="right" width="10%">{3}</td></tr>
-<tr><td colspan="4"><hr align="center" size="1" width="392" color="white" noshade></td></tr>
+<tr><td width="5%">{0}</td><td width="50%">{1}</td><td width="34%"></td><td align="right" width="10%">{3}</td><td width="1%"></td></tr>
+<tr><td colspan="5"><hr align="center" size="1" width="392" color="white" noshade></td></tr>

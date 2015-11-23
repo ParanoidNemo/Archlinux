@@ -16,6 +16,4 @@
 <table width="400">
 <tr><td align="center" valign="middle" rowspan="4" width="30%"><a href="exec:cantata"><img src="{cover}" width=100 height=100/></a></td><td width="40%" align="left" id="title">{7}</td><td width="29%"></td></tr>
 <tr><td align="left" id="artist">{5}</td><td></td></tr>
-<tr></tr>
-<tr></tr>
 </table></html>

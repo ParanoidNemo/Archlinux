@@ -17,6 +17,6 @@
 
 <html><head><link href="{x}" rel="stylesheet" type="text/css"></head>
 <table width="392">
-<tr><td rowspan="2" align="center" valign="middle" width="15%"><a href="exec:mpc toggle"><img src={button} width=32/></a></td><td align="center" valign="middle" width="70%">{6}</td><td rowspan="2" align="center" valign="middle" width="15%"><a href="exec:qdbus org.kde.be.shell /Shell org.kde.be.shell.hidePanel FileSystem; qdbus org.kde.be.shell /Shell org.kde.be.shell.hidePanel Notify; sleep 0.3; qdbus org.kde.be.shell /Shell org.kde.be.shell.showPanel Cover; qdbus org.kde.be.shell /Shell org.kde.be.shell.showPanel Playlist"><img src={dot} width=32/></a></td></tr>
-<tr><td align="center" valign="middle">{5} -- {7}</td></tr>
+<tr><td rowspan="2" align="center" valign="middle" width="15%"><a href="exec:mpc toggle"><img src={button} width=32/></a></td><td align="center" valign="middle" width="70%" id="c_title">{6}</td><td rowspan="2" align="center" valign="middle" width="15%"><a href="exec:qdbus org.kde.be.shell /Shell org.kde.be.shell.hidePanel FileSystem; qdbus org.kde.be.shell /Shell org.kde.be.shell.hidePanel Notify; qdbus org.kde.be.shell /Shell org.kde.be.shell.hidePanel Air; sleep 0.3; qdbus org.kde.be.shell /Shell org.kde.be.shell.showPanel Cover; qdbus org.kde.be.shell /Shell org.kde.be.shell.showPanel Playlist"><img src={dot} width=32/></a></td></tr>
+<tr><td align="center" valign="middle" id="c_info">{5} -- {7}</td></tr>
 </table></html>
