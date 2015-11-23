@@ -1,5 +1,14 @@
 /* Task theme configuration file */
 
+.BE--Task[needsAttention=true] {
+    background-color: rgba(255,128,0,30%);
+    background-image: url("${base}/background_images/active.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    border: none;
+    padding: 0 0 0 0;
+}
+
 .BE--Task, #OneTask, #ManyTasks {
     background-color: transparent;
     border: none;
@@ -16,7 +25,8 @@
 }
 
 .BE--Task:hover, #OneTask:hover, #ManyTasks:hover {
-    background-color: rgba(125,118,109,30%);
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(125,118,109,35%), stop: 1.0 rgba(125,118,109,60%));
+    /*background-color: rgba(125,118,109,30%);*/
     background-image: url("${base}/background_images/active.png");
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -25,7 +35,8 @@
 }
 
 #OneTask:checked, #ManyTasks:checked {
-    background-color: rgba(125,118,109,60%);
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(125,118,109,35%), stop: 1.0 rgba(125,118,109,60%));
+    /*background-color: rgba(125,118,109,60%);*/
     background-image: url("${base}/background_images/active.png");
     background-repeat: no-repeat;
     background-position: bottom center;
