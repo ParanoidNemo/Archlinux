@@ -1,3 +1,6 @@
 [submodule "be.utils"]
 	path = be.utils
 	url = git@github.com:ParanoidNemo/be.utils.git
+[submodule "twolame"]
+	path = twolame
+	url = git@github.com:ParanoidNemo/twolame.git
