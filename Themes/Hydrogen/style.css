@@ -5,7 +5,7 @@ style.css.d dir. */
 /* Principal Panel style settings */
 
 #BottomPanel {
-    background-color: rgba(0,0,0,100%);
+    background-color: rgba(0,0,0,90%);
     border: none;
     border-top: 1px solid rgba(0,0,0,100%);
 }
