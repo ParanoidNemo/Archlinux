@@ -1,0 +1,86 @@
+/*This is the main style configuration file, the other one can be found into the
+Hydrogen theme for BE::Shell created by Andrea Calzavacca (paranoid.nemo@gmail.com)
+style.css.d dir. */
+
+/* Principal Panel style settings */
+
+#BottomPanel {
+    background-color: rgba(0,0,0,90%);
+    border: none;
+    border-top: 1px solid rgba(0,0,0,100%);
+}
+
+#TopPanel {
+    border: none;
+}
+
+#Container {
+    background-color: transparent;
+}
+
+#PagerPanel {
+    background-color: rgba(10,10,10,80%);
+    border: none;
+    margin: 0 0 0 0;
+}
+
+#workspace {
+    background-color: transparent;
+    border: none;
+    padding: 0 8 0 10;
+}
+
+#user {
+    background-color: transparent;
+    border: none;
+}
+
+#workspace:hover, #user:hover {
+    background-color: rgba(125,118,109,30%);
+}
+
+#search {
+    background-color: transparent;
+    border: none;
+    padding: 0 10 0 10;
+}
+
+#toggleNotifications, .BE--Volume {
+    background-color: transparent;
+    border: none;
+    padding: 4 4 0 4;
+}
+
+#toggleNotifications:hover, .BE--Volume:hover, #info:hover, #media:hover {
+    background-color: rgba(125,118,109,50%);
+}
+
+.BE--Volume {
+    max-width: 20px;
+    padding: 0 0 0 0;
+    border: none;
+    margin: 0 4 0 4;
+}
+
+#media {
+    background-color: transparent;
+    border: none;
+    padding: 0 4 0 4;
+}
+
+#media QToolButton {
+    background-color: transparent;
+    border: none;
+    padding: 2 2 0 2;
+    max-width: 20px;
+}
+
+#info {
+    padding: 2 -6 0 0;
+    font-family: RobotoLight;
+    font-size: 12px;
+}
+
+*:menu-indicator {
+    image: none;
+}
