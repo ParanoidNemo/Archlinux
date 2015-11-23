@@ -23,7 +23,7 @@
 [twolame]
 # choose what module you want to start
 start_mail = 1
-start_fs = 1
+start_system = 1
 start_update = 1
 start_music = 1
 start_cloud = 0
@@ -33,29 +33,28 @@ css_file = twolame.css
 
 #------------------------------FileSystem---------------------------------------
 
-[fs]
+[system]
 
 # set the time between fs info update in seconds
-update_period = 1200
+update_period = 60
 
 # define the number and path for the mount point (default 2, / and home)
 fm = dolphin
-mnt_num = 2
-mount_point0 = /
-mount_point1 = ~
-#mount_point2 =
-#mount_point3 =
-#mount_point4 =
+mnt = /,~
 
 #---------------------------------Mail------------------------------------------
 
 [mail]
 
+# multiple mailbox are avaiable adding the corresponding informations follow by ',' without spaces
+
 update_period = 600
+
 security = imap
 server = imap.gmail.com
-user =
+user = 
 password =
+
 plain = False
 service = gmail
 
@@ -64,6 +63,7 @@ service = gmail
 [update]
 
 update_period = 600
+pm = pacman
 
 #---------------------------------Music-----------------------------------------
 
@@ -71,7 +71,7 @@ update_period = 600
 
 update_period = 5
 port = 6600
-cover_path = ~/music
+cover_path = ~/musica
 
 #---------------------------------Cloud-----------------------------------------
 
@@ -80,7 +80,7 @@ cover_path = ~/music
 update_period = 1200
 
 use_rclone = 1
-rclone_config = 
+rclone_config = /home/user/.rclone.conf
 
 use_mega = 1
 size = gb
