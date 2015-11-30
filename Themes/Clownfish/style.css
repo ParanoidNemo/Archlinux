@@ -1,0 +1,24 @@
+
+/* Panel style section */
+
+#MainPanel {
+    background-color: rgba(180,180,180,100%);
+    border: none;
+    border-right: 1px solid rgba(100,100,100,100%);
+    margin: 0 0 0 0;
+}
+
+/* Single applet section */
+
+#toggleNotifications {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 rgb(125,118,109,35%), stop: 1.0 rgba(125,118,109,60%));
+    border: none;
+    padding: 4 4 4 4;
+    border-top: 1px solid rgba(120,120,120,100%);
+}
+
+#toggleNotifications:hover {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 rgb(105,98,89,45%), stop: 1.0 rgba(105,98,89,90%));
+    border: none;
+    padding: 4 4 4 4;
+}

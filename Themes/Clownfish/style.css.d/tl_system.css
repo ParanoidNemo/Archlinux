@@ -1,0 +1,7 @@
+/* CSS file used to theme system thread from twolame */
+
+#title {
+    color: rgba(171,205,239,100%); /*rgba(99,151,208,100%);*/
+    font-weight: bold;
+    font-stretch: condensed;
+}

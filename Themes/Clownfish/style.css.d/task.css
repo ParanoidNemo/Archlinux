@@ -1,0 +1,28 @@
+/* Task theme configuration file */
+
+.BE--Task, #OneTask, #ManyTasks {
+    background-color: transparent;
+    border: none;
+    max-height: 52px;
+    min-height: 40px;
+    padding: 0 0 0 0; /*needed to make the icons stay still*/
+    border-bottom: 1px solid rgba(120,120,120,80%);
+}
+
+#OneTask:enabled, #ManyTasks:enabled {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 rgb(105,98,89,35%), stop: 1.0 rgba(105,98,89,60%));
+    border: none;
+    border-bottom: 1px solid rgba(120,120,120,80%);
+}
+
+.BE--Task:hover, #OneTask:hover, #ManyTasks:hover {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 rgb(125,118,109,35%), stop: 1.0 rgba(125,118,109,60%));
+    border: none;
+    border-bottom: 1px solid rgba(120,120,120,80%);
+}
+
+#OneTask:checked, #ManyTasks:checked {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 rgb(105,98,89,45%), stop: 1.0 rgba(105,98,89,90%));
+    border: none;
+    border-bottom: 1px solid rgba(120,120,120,80%);
+}

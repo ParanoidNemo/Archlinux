@@ -1,0 +1,10 @@
+# This is the format file for fs info thread in twolame
+# The allowed entry are
+# {0}                       - Mute status
+# {1}                       - Volume of system audio
+# {x}                       - link to the css file
+
+<html><head><link href="{x}" rel="stylesheet" type="text/css"></head>
+<table width="100">
+<tr><td align="center" valign="middle">Volume: {1}%</td></tr>
+</table></html>

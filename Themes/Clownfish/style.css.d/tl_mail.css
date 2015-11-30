@@ -1,0 +1,20 @@
+/* CSS file used to theme mail thread from twolame
+   permitted entries are:
+   - header (set the header style)
+   - title (set the title style)
+   - to (set the email address style)
+   - from (set from style)
+   - message (set the message corpe style)
+   - date (set data style)*/
+
+#header{
+    font-weight: bold;
+}
+
+#title {
+    font-weight: bold;
+}
+
+#to {
+    font-style: italic;
+}

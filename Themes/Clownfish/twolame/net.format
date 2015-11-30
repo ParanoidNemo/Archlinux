@@ -1,0 +1,11 @@
+# This is the format file for fs info thread in twolame
+# The allowed entry are
+# {connection}              - Status of the connection
+# {essid}                   - Essid name
+# {quality}                 - quality of signal
+# {x}                       - link to the css file
+
+<html><head><link href="{x}" rel="stylesheet" type="text/css"></head>
+<table width="100">
+<tr><td align="center" valign="middle">WiFi: {quality}%</td></tr>
+</table></html>

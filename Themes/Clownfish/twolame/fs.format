@@ -1,0 +1,14 @@
+# This is the format file for fs info thread in twolame
+# The allowed entry are
+# {0} - partition name for the mounted file system (e.g. /dev/sda2)
+# {1} - filesystem type (e.g. ext4)
+# {2} - total space (Gb)
+# {3} - amount of used space (Gb)
+# {4} - amount of free space (Gb)
+# {5} - percentage of used space
+# {6} - mount point for the partition (e.g. /home)
+# {7} - percentage of used space
+# {8} - name of the mount point (e.g. Home)
+
+<tr><td align="left" id="title">{8}:</td><td align="right" colspan="2">{3} / {2}</td><td align="right">({5})</td><td align="right" colspan="2">{0}</td></tr>
+<tr><td colspan="6"><hr align="center" size="1" width="392"></td></tr>
