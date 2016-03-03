@@ -1,0 +1,33 @@
+/* Task theme configuration file */
+
+.BE--Task, #OneTask, #ManyTasks {
+    background-color: transparent;
+    border: none;
+    padding: 0 0 0 0;
+    max-width: 52px;
+    min-height: 40px;
+}
+
+#OneTask:enabled, #ManyTasks:enabled {
+    background-image: url("${base}/background_images/checked.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    border: none;
+    padding: 0 0 0 0;
+}
+
+.BE--Task:hover, #OneTask:hover, #ManyTasks:hover {
+    background-image: url("${base}/background_images/active.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    border: none;
+    padding: 0 0 0 0;
+}
+
+#OneTask:checked, #ManyTasks:checked {
+    background-image: url("${base}/background_images/active.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    border: none;
+    padding: 0 0 0 0;
+}

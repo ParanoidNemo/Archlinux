@@ -1,0 +1,68 @@
+#TopPanel {
+    border-bottom-right-radius: 2px;
+}
+
+#Container {
+    background-color: rgba(80,80,80,40%);
+    border-bottom: 1px solid rgba(0,0,0,100%);
+}
+
+#siInfo {
+    padding: 0 4 0 0;
+}
+
+.BE--Volume {
+    background-color: transparent;
+    max-height: 20px;
+    border: none;
+    padding: 0 0 0 0;
+    margin: 0 4 0 4;
+}
+
+.BE--Volume:hover, #info:hover, #media:hover {
+    background-color: rgba(125,118,109,50%);
+}
+
+#media {
+    background-color: transparent;
+    border: none;
+    padding: 0 4 0 4;
+    max-height: 20px;
+}
+
+#media QToolButton {
+    background-color: transparent;
+    border: none;
+    padding: 2 2 0 2;
+    max-width: 20px;
+}
+
+#info {
+    padding: 2 0 0 0;
+    font-family: RobotoLight;
+    font-size: 12px;
+}
+
+#user, #shutdown, #reboot, #suspend, #logout {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1px;
+}
+
+#user {
+    padding: 0 4 0 4;
+}
+
+#user:hover, #shutdown:hover, #reboot:hover, #suspend:hover, #logout:hover, #siToggle:hover, #reToggle:hover, #audio:hover, #net:hover {
+    background-color: rgba(99,151,208,50%);
+    border-radius: 3px;
+}
+
+#siToggle, #reToggle, #audio, #net {
+    background-color: transparent;
+    border: none;
+}
+
+#reToggle, #audio {
+    margin-bottom: 1px;
+}

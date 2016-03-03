@@ -1,0 +1,9 @@
+#{x} css
+#{0} mute state
+#{1} volume
+#{icon}
+
+<html><head><link href="{x}" rel="stylesheet" type="text/css"></head>
+<table align="center" width="60">
+<tr><td width="40%"><a href="exec:konsole -e alsamixer"><img src={icon} width=16/></a></td><td align="right" width="60%">{1}%</td></tr>
+</table></html>

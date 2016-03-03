@@ -1,0 +1,14 @@
+/* Clock and calendar theme configuration file */
+
+.BE--Clock {
+    background-color: transparent;
+    color: rgba(255,255,255,100%);
+    border: none;
+    border-left: 1px solid rgba(255,255,255,100%);
+    padding: 0 8 0 8;
+    margin-bottom: 1px;
+}
+
+.BE--Clock:hover {
+    background-color: rgba(99,151,208,50%);
+}

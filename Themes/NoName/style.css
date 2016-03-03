@@ -1,0 +1,46 @@
+/*This is the main style configuration file, the other one can be found into the
+Hydrogen theme for BE::Shell created by Andrea Calzavacca (paranoid.nemo@gmail.com)
+style.css.d dir. */
+
+/* Principal Panel style settings */
+
+#MainPanel {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 rgb(125,118,109,60%), stop: 1.0 rgba(125,118,109,90%));
+    border: none;
+    border-right: 1px solid rgba(0,0,0,100%);
+}
+
+#Mpd {
+    background-color: rgba(0,0,0,60%);
+    border-top-right-radius: 3px;
+}
+
+#Cover {
+    background-color: rgba(30,30,30,40%);
+}
+
+#search {
+    background-color: transparent;
+    border: none;
+    padding: 8 0 8 0;
+}
+
+#toggleInfo {
+    background-color: transparent;
+    border: none;
+    padding: 4 0 4 0;
+}
+
+#toggleInfo:hover {
+    background-color: rgba(125,118,109,50%);
+}
+
+*:menu-indicator {
+    image: none;
+}
+
+#cov {
+    padding: 0 0 0 0;
+    max-height: 54px;
+    max-width: 54px;
+}
